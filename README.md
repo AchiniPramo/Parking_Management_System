@@ -93,6 +93,52 @@ SPMS/
 - 📸 ![Eureka Dashboard](./doc/screenshot/eureka_dashboard.png)
 
 ---
+
+## 🧑‍💻 Quick Start Guide
+
+### 1. Clone the Repository
+
+```sh
+git clone https://github.com/AchiniPramo/Parking_Management_System.git
+cd SPMS
+```
+
+### 2. Launch the Configuration Server
+
+```sh
+cd config-server
+mvn spring-boot:run
+```
+
+### 3. Start the Eureka Service Registry
+
+```sh
+cd eureka-server
+mvn spring-boot:run
+```
+
+### 4. Run the API Gateway
+
+```sh
+cd api-gateway
+mvn spring-boot:run
+```
+
+### 5. Deploy Microservices (in separate terminals)
+
+```sh
+cd parking-service
+mvn spring-boot:run
+
+cd vehicle-service
+mvn spring-boot:run
+
+cd user-service
+mvn spring-boot:run
+
+cd payment-service
+mvn spring-boot:run
+```
 ## 🏁 Conclusion
 
 The **Smart Parking Management System (SPMS)** demonstrates how modern urban challenges can be tackled using intelligent, modular, and scalable technology. By leveraging Spring Boot microservices and cloud-based components like Eureka, Config Server, and Gateway, the system provides a seamless experience for users, parking owners, and city operators.
