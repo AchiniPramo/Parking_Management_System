@@ -18,10 +18,7 @@ public class ReceiptGenerator {
         PdfDocument pdf = new PdfDocument(writer);
         Document document = new Document(pdf);
 
-        document.add(new Paragraph("Parking Payment Receipt")
-                .setBold()
-                .setFontSize(18)
-                .setTextAlignment(TextAlignment.CENTER));
+        document.add(new Paragraph("Parking Payment Receipt").setBold().setFontSize(18).setTextAlignment(TextAlignment.CENTER));
 
         document.add(new Paragraph("Receipt Number: " + receipt.getReceiptNumber()));
         document.add(new Paragraph("Issued At: " + receipt.getIssuedAt()));
