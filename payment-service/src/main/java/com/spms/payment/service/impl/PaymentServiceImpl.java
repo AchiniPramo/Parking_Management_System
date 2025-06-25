@@ -54,24 +54,20 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public PaymentResponseDTO getPaymentById(Long id) {
-        Payment payment = paymentRepository.findById(id)
-                .orElseThrow(() -> new PaymentNotFoundException("Payment not found with ID: " + id));
+        Payment payment = paymentRepository.findById(id).orElseThrow(() -> new PaymentNotFoundException("Payment not found with ID: " + id));
         return mapToResponseDTO(payment);
     }
 
     @Override
     public List<PaymentResponseDTO> getPaymentsByUser(Long userId) {
         List<Payment> payments = paymentRepository.findByUserId(userId);
-        return payments.stream()
-                .map(this::mapToResponseDTO)
-                .collect(Collectors.toList());
+        return payments.stream().map(this::mapToResponseDTO).collect(Collectors.toList());
     }
 
     @Override
     @Transactional
     public PaymentResponseDTO updatePaymentStatus(String paymentId, PaymentStatusUpdateDTO dto) {
-        Payment payment = paymentRepository.findByPaymentId(paymentId)
-                .orElseThrow(() -> new PaymentNotFoundException("Payment not found with ID: " + paymentId));
+        Payment payment = paymentRepository.findByPaymentId(paymentId).orElseThrow(() -> new PaymentNotFoundException("Payment not found with ID: " + paymentId));
 
         payment.setStatus(dto.getStatus());
         payment.setTransactionId(dto.getTransactionId());
@@ -84,8 +80,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Payment getPaymentEntityByPaymentId(String paymentId) {
-        return paymentRepository.findByPaymentId(paymentId)
-                .orElseThrow(() -> new PaymentNotFoundException("Payment not found with ID: " + paymentId));
+        return paymentRepository.findByPaymentId(paymentId).orElseThrow(() -> new PaymentNotFoundException("Payment not found with ID: " + paymentId));
     }
 
     private PaymentResponseDTO mapToResponseDTO(Payment payment) {

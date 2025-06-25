@@ -25,9 +25,7 @@ public class ReceiptServiceImpl implements ReceiptService {
         Payment payment = paymentService.getPaymentEntityByPaymentId(paymentId);
 
         if (payment.getStatus() != PaymentStatus.COMPLETED) {
-            throw new InvalidReceiptRequestException(
-                    "Cannot generate receipt for payment with status: " + payment.getStatus()
-            );
+            throw new InvalidReceiptRequestException("Cannot generate receipt for payment with status: " + payment.getStatus());
         }
 
         return mapToReceiptDTO(payment);
