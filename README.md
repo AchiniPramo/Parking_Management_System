@@ -90,7 +90,7 @@ SPMS/
 ## 📚 Resources
 
 - 📬 [Postman Collection](./Parking_Management_System.postman_collection.json)  
-- 📸 ![Eureka Dashboard](./docs/screenshot/eureka_dashboard.png)
+- 📸 ![Eureka Dashboard](./Parking_Management_System\doc\screenshot\eureka_dashboard.png)
 
 ---
 
