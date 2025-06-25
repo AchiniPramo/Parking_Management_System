@@ -512,7 +512,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"paymentId\": \"PAY-001\",\r\n  \"userId\": 1,\r\n  \"parkingSpaceId\": 2,\r\n  \"vehicleId\": 3,\r\n  \"amount\": 250.00,\r\n  \"method\": \"CREDIT_CARD\",\r\n  \"cardNumber\": \"1234\",\r\n  \"cardHolderName\": \"Kavi Sathsarani\",\r\n  \"description\": \"Parking fee for 2 hours\"\r\n}\r\n",
+							"raw": "{\r\n  \"paymentId\": \"PAY-001\",\r\n  \"userId\": 1,\r\n  \"parkingSpaceId\": 2,\r\n  \"vehicleId\": 3,\r\n  \"amount\": 250.00,\r\n  \"method\": \"CREDIT_CARD\",\r\n  \"cardNumber\": \"1234\",\r\n  \"cardHolderName\": \"Achini Pramodhya\",\r\n  \"description\": \"Parking fee for 2 hours\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
